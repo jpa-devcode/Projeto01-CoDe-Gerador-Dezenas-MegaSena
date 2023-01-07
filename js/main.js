@@ -25,12 +25,16 @@ function main() {
   }
 }
 
-btnGerar.addEventListener('click', function () {
-  main();
+function desativarBotaoGerar() {
   btnGerar.setAttribute('disabled', '');
   botaoGerar.style.color = '#8ba5b6';
   botaoGerar.style.border = '2px solid #8ba5b6';
   botaoGerar.style.cursor = 'Default';
+}
+
+btnGerar.addEventListener('click', function () {
+  main();
+  desativarBotaoGerar();
 });
 
 btnLimpar.addEventListener('click', function () {
