@@ -30,6 +30,7 @@ btnGerar.addEventListener('click', function () {
   btnGerar.setAttribute('disabled', '');
   botaoGerar.style.color = '#8ba5b6';
   botaoGerar.style.border = '2px solid #8ba5b6';
+  botaoGerar.style.cursor = 'Default';
 });
 
 btnLimpar.addEventListener('click', function () {
