@@ -16,11 +16,11 @@ function main() {
 
   for (var i = 0; i < quantidadeDeDezenas; i++) {
     listaDeDezenas.push(('00' + gerarDezenas()).slice(-2));
-    var elemento_pai = document.querySelector('.area-dezenas');
-    var titulo = document.createElement('span');
-    var texto = document.createTextNode(listaDeDezenas);
-    titulo.appendChild(texto);
-    elemento_pai.appendChild(titulo);
+    var conteiner = document.querySelector('.area-dezenas');
+    var criarTag = document.createElement('span');
+    var conteudoTag = document.createTextNode(listaDeDezenas);
+    criarTag.appendChild(conteudoTag);
+    conteiner.appendChild(criarTag);
     listaDeDezenas = [];
   }
 }
