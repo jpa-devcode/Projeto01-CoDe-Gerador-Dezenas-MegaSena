@@ -1,19 +1,16 @@
 const min = 1;
 const max = 60;
-const btn = document.querySelector('button');
+const btnGerar = document.querySelector('#botao-gerar');
+const btnLimpar = document.querySelector('#botao-limpar');
 const areaDezenas = document.querySelector('.area-dezenas');
-const dezenaUm = document.querySelector('#dezena-01');
-var dezena = 0;
-// var listaSpan = document.getElementById('#area-dezenas');
-// var novoSpan = document.createElement('span');
-
+var botaoGerar = document.querySelector('#botao-gerar');
 var quantidadeDeDezenas = 6;
 var listaDeDezenas = [];
 
 function main() {
   listaDeDezenas = [];
   function gerarDezenas() {
-    dezena = Math.floor(Math.random() * (max - min) + min);
+    var dezena = Math.floor(Math.random() * (max - min) + min);
     return dezena;
   }
 
@@ -28,11 +25,13 @@ function main() {
   }
 }
 
-btn.addEventListener('click', function () {
+btnGerar.addEventListener('click', function () {
   main();
-  // const pegarDezena = listaDeDezenas.map((elemento) => {
-  //   return (areaDezenas.textContent = elemento);
-  // });
-  // criarSpans();
-  // console.log(listaDeDezenas);
+  btnGerar.setAttribute('disabled', '');
+  botaoGerar.style.color = '#8ba5b6';
+  botaoGerar.style.border = '2px solid #8ba5b6';
+});
+
+btnLimpar.addEventListener('click', function () {
+  window.location.reload();
 });
