@@ -20,13 +20,19 @@ function gerarDezenas() {
   }
 
   for (var i = 0; i < quantidadeDeDezenas; i++) {
-    listaDeDezenas.push(('00' + geradorDeDezenas()).slice(-2));
+    var dezenaSorteada = ('00' + geradorDeDezenas()).slice(-2);
+
+    if (listaDeDezenas.includes(dezenaSorteada)) {
+      i -= 1;
+      continue;
+    }
+
+    listaDeDezenas.push(dezenaSorteada);
     var container = document.querySelector('.area-dezenas');
     var criarTag = document.createElement('span');
-    var conteudoTag = document.createTextNode(listaDeDezenas);
+    var conteudoTag = document.createTextNode(listaDeDezenas[i]);
     criarTag.appendChild(conteudoTag);
     container.appendChild(criarTag);
-    listaDeDezenas = [];
   }
 }
 
@@ -82,9 +88,11 @@ function ativarBotaoApagar() {
 btnGerar.addEventListener('click', function () {
   gerarDezenas();
   desativarBotaoGerar();
+  console.log(contador);
 });
 
 btnApagar.addEventListener('click', function () {
   apagarDezenas();
   desativarBotaoApagar();
+  contador = 0;
 });
