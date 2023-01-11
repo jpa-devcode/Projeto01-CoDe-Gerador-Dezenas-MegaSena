@@ -1,4 +1,4 @@
-#Projeto: Gerador de Dezenas para MEGA SENA (O referido projeto faz parte dos desafios da Mentoria "Conquiste sua Vaga").
+# Projeto: Gerador de Dezenas para MEGA SENA (O referido projeto faz parte dos desafios da Mentoria "Conquiste sua Vaga").
 
 Instruções de uso da aplicação:
 
